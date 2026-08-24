@@ -18,6 +18,9 @@ cp .env.example .env.local
 
 `VITE_PUBLIC_MAPBOX_TOKEN=YOUR_MAPBOX_ACCESS_TOKEN`
 
+Routing is optional. See [routing provider configuration](routing.md) for the
+supported environment variables.
+
 #### Build
 
 ```bash

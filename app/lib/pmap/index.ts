@@ -16,6 +16,7 @@ import loadAndAugmentStyle, {
   LASSO_SOURCE_NAME,
 } from "app/lib/load_and_augment_style";
 import { splitFeatureGroups } from "app/lib/pmap/split_feature_groups";
+import { routingProvider } from "app/lib/routing";
 import { shallowArrayEqual } from "app/lib/utils";
 import mapboxgl from "mapbox-gl";
 import type {
@@ -164,6 +165,7 @@ export default class PMap {
     map.addControl(
       new mapboxgl.AttributionControl({
         compact: true,
+        customAttribution: routingProvider?.attributionHtml,
       }),
     );
     map.getCanvas().style.cursor = CURSOR_DEFAULT;
